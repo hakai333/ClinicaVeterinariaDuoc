@@ -1,6 +1,8 @@
 package com.example.demo.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public class Mascota {
 
     @ManyToOne
     @JoinColumn(name = "persona_rut")
+    @JsonBackReference
     private Persona persona;
 
 
